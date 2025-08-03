@@ -1,8 +1,8 @@
 #include "esphome.h"
 
-class BoostController : public Component {
+class BoostConverter : public Component {
  public:
-  BoostController(LEDCOutput *pwm) : pwm_(pwm) {}
+  BoostConverter(LEDCOutput *pwm) : pwm_(pwm) {}
 
   void setup() override {
     adc1_config_width(ADC_WIDTH_BIT_12);  // 12-bit ADC
