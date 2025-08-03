@@ -1,1 +1,1 @@
-Test project for using my own libs in esphome
+Test project for using my own libs in esphome.
