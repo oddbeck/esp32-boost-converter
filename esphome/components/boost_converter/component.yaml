@@ -1,0 +1,6 @@
+name: "My boost converter component"
+description: "A custom ESPHome component hosted on GitHub"
+files:
+  - boost_converter.cpp
+  - boost_converter.h
+dependencies: []
