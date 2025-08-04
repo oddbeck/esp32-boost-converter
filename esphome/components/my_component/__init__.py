@@ -3,11 +3,18 @@ import esphome.codegen as cg
 
 from esphome.const import CONF_ID
 
-example_component_ns = cg.esphome_ns.namespace("my_component")
-MyComponent = example_component_ns.class_("MyComponent", cg.Component)
+CONF_FOO = "foo"
+CONF_BAR = "bar"
+CONF_BAZ = "baz"
+
+example_component_ns = cg.esphome_ns.namespace("example_component")
+ExampleComponent = example_component_ns.class_("ExampleComponent", cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
-    cv.GenerateID(): cv.declare_id(MyComponent),
+    cv.GenerateID(): cv.declare_id(ExampleComponent),
+    cv.Required(CONF_FOO): cv.boolean,
+    cv.Optional(CONF_BAR): cv.string,
+    cv.Optional(CONF_BAZ): cv.int_range(0, 255),
 })
 
 
@@ -16,8 +23,8 @@ async def to_code(config):
 
     await cg.register_component(var, config)
 
-    # cg.add(var.set_foo(config[CONF_FOO]))
-    # if bar := config.get(CONF_BAR):
-    #     cg.add(var.set_bar(bar))
-    # if baz := config.get(CONF_BAZ):
-    #     cg.add(var.set_baz(baz))
+    cg.add(var.set_foo(config[CONF_FOO]))
+    if bar := config.get(CONF_BAR):
+        cg.add(var.set_bar(bar))
+    if baz := config.get(CONF_BAZ):
+        cg.add(var.set_baz(baz))
