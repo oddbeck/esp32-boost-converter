@@ -1,4 +1,4 @@
-esphome:
-  name: example_component
-  includes:
-    - example_component.h
+name: "Example Component"
+files:
+  - example_component.h
+  - example_component.cpp
