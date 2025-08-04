@@ -1,6 +1,4 @@
-name: "Example Component"
-files:
-  - example_component.cpp
-  - example_component.h
-includes:
-  - example_component.h
+esphome:
+  name: example_component
+  includes:
+    - example_component.h
