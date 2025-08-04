@@ -6,11 +6,11 @@ namespace my_component {
 
 static const char *const TAG = "my_component";
 
-void BoostConverter::setup() {
+void MyComponent::setup() {
   ESP_LOGI(TAG, "Setting up MyComponent");
 }
 
-void BoostConverter::loop() {
+void MyComponent::loop() {
   ESP_LOGD(TAG, "Looping MyComponent");
 }
 
