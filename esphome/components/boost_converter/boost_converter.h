@@ -5,7 +5,7 @@
 namespace esphome {
 namespace my_component {
 
-class MyComponent : public Component {
+class BoostConverter : public Component {
  public:
   void setup() override;
   void loop() override;
