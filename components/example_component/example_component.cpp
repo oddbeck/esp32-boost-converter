@@ -16,6 +16,9 @@ void ExampleComponent::loop() {
   // Note: code here MUST NOT BLOCK (see below)
 }
 
+void ExampleComponent::write_state(bool state) {
+    ESP_LOGCONFIG(TAG, "Custom binary output");
+}
 void ExampleComponent::dump_config(){
   ESP_LOGCONFIG(TAG, "Example component");
   ESP_LOGCONFIG(TAG, "  foo = %s", TRUEFALSE(this->foo_));
